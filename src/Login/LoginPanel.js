@@ -40,21 +40,20 @@ class LoginPanel extends React.Component{
         })
     }
 
-    handleFocus=(e)=>{
-        if(e.target.type==="text"){
-            this.setState({
+    handleFocusName=()=>{
+       this.setState({
                 nameWarn:true,
-            })
-        }else{
-            this.setState({
+        })
+    }
+    handleFocusPassword=()=>{
+         this.setState({
                 passwordWarn:true,
-            })
-        }
+        })
     }
 
-    handleBlur=(e)=>{
-        if(e.target.type==="text"){
-            var isName = nameReg.test(this.state.userName);
+    handleBlurName=()=>{
+
+        var isName = nameReg.test(this.state.userName);
             if(isName){
                 this.setState({
                     nameInfo:'手机号格式正确',
@@ -66,8 +65,11 @@ class LoginPanel extends React.Component{
                     isName: false,
                 })
             }
-        }else{
-            var isPass = passwordReg.test(this.state.password);
+       
+    }
+
+    handleBlurPassword=()=>{
+        var isPass = passwordReg.test(this.state.password);
             if (isPass) {
                 this.setState({
                     passwordInfo: '密码格式正确',
@@ -79,7 +81,6 @@ class LoginPanel extends React.Component{
                     isPassword: false,
                 })
             }
-        }
     }
 
     
@@ -122,7 +123,7 @@ class LoginPanel extends React.Component{
                     <form action="" className="login_form">
                         <h2>乐享云登录</h2>
                         <div className="login_form_line">
-                            <input type="text" placeholder="输入手机号" onChange={this.changeName} value={this.state.userName}  onFocus={this.handleFocus} onBlur={this.handleBlur}/>
+                            <input type="text" placeholder="输入手机号" onChange={this.changeName} value={this.state.userName}  onFocus={this.handleFocusName} onBlur={this.handleBlurName}/>
                             <i className="iconfont icon-dengluyonghuming"></i>
                             <i className="iconfont icon-cuo" style={{display:this.state.userName===""?'none':'block'}} onClick={this.deleteName}></i>
                             <div className={this.state.nameWarn ? "login_name_warn login_warn login_warn_active" : "login_name_warn login_warn"} style={{ color: this.state.isName ? 'green' : 'red'}}>
@@ -130,7 +131,7 @@ class LoginPanel extends React.Component{
                             </div>
                         </div>
                         <div className="login_form_line">
-                            <input type={this.state.isShow ? 'text' : "password"} placeholder="输入密码" onChange={this.changePassword} value={this.state.password} onFocus={this.handleFocus} onBlur={this.handleBlur}/>
+                            <input type={this.state.isShow ? 'text' : "password"} placeholder="输入密码" onChange={this.changePassword} value={this.state.password} onFocus={this.handleFocusPassword} onBlur={this.handleBlurPassword}/>
                             <i className="iconfont icon-mima"></i>
                             <i className="iconfont icon-cuo" style={{ display: this.state.password=== "" ? 'none' : 'block' }} onClick={this.deletePassword}></i>
                             <i  className={this.state.isShow ? "iconfont icon-yanjing-bi" : "iconfont icon-yanjing"} onClick={this.changeShow}></i>
