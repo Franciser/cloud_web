@@ -1,0 +1,193 @@
+input::-webkit-input-placeholder{
+            color:#bbbbbb;
+            font-size:14px;
+        }
+.loginPanel_wrap{
+    .login_panel{
+        position: fixed;
+        width:400px;
+        height:450px;
+        top:50%;
+        left:50%;
+        margin-top:-250px;
+        margin-left:-200px;
+        background-color: #fff;
+        .login_form{
+            width:100%;
+            height:100%;
+            box-sizing: border-box;
+            padding:40px;
+            text-align: center;
+            h2{
+                font-size:20px;
+                font-weight: normal;
+                margin-bottom:30px;
+            }
+            .login_form_line{
+                margin:10px 0;
+                &:nth-of-type(1),&:nth-of-type(2){
+                    position: relative;
+                    .login_warn{
+                           display: none;
+                           width:100%;
+                           height:30px;
+                           line-height:30px;
+                           margin-top:5px;
+                           text-align: left;
+                           
+                           p{
+                            font-size:14px;
+                           }
+                           &.login_warn_active{
+                               display: block;
+                           }
+                       }
+                       
+                    input{
+                        width:100%;
+                        height:50px;
+                        box-sizing: border-box;
+                        padding-left:35px;
+                        outline:none;
+                        border:1px solid #d9d9d9;
+                        &:focus{
+                            border:1px solid #387ee8;
+                        }
+                       
+                    }
+                    &:nth-of-type(1),&:nth-of-type(2){
+                        i{
+                            font-size:20px;
+                        }
+                        i:nth-of-type(1){
+                        position: absolute;
+                        top:13px;
+                        left:10px;
+                        color:#d9d9d9;
+                        cursor: pointer;
+                        }
+                        i:nth-of-type(2){
+                            position: absolute;
+                            top:13px;
+                            right:20px;
+                            color:#d9d9d9;
+                            cursor: pointer;
+                        }
+                        
+                    }
+
+                    &:nth-of-type(2){
+                        i:nth-of-type(2){
+                            position: absolute;
+                            top:13px;
+                            right:50px;
+                            color:#d9d9d9;
+                            cursor: pointer;
+                        }
+                      i:nth-of-type(3){
+                            position: absolute;
+                            top:13px;
+                            right:20px;
+                            color:#d9d9d9;
+                            cursor: pointer;
+                      }
+                    }
+                   
+                }
+
+                .login_form_line_left,.login_form_line_right{
+                    a{
+                        font-size:14px;
+                        color:#387ee8;
+                    }
+                    span{
+                        font-size:12px;
+                    }
+                }
+                .login_form_line_left{
+                    float:left;
+                    
+                }
+                .login_form_line_right{
+                    float:right;
+                }
+
+                &:nth-of-type(3){
+                    margin-top:30px;
+                    height:20px;
+                    .login_form_line_left{
+                       #agree_item{
+                            display: none;
+                            }
+                        #agree_item:checked+label::before{
+                            border:1px solid rgba(0,0,0,0);
+                            background-image: url("../img/checked.png");
+                            background-size:100%;
+                        }
+                        label{
+                            vertical-align: top;
+                            cursor: pointer;
+                            color:#464444;
+                            
+                        }
+                        label::before{
+                            content:'';
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right:8px;
+                            margin-left:3px;
+                            color:#fff;
+                            background-color:rgba(0,0,0,0);
+                            width:12px;
+                            height:12px;
+                            border: 1px solid rgb(202, 202, 202);
+                            border-radius:2px;
+                        } 
+                    }
+                    .login_form_line_right{
+                       #not_login_again{
+                            display: none;
+                            }
+                        #not_login_again:checked+label::before{
+                            border:1px solid rgba(0,0,0,0);
+                            background-image: url("../img/checked.png");
+                            background-size:100%;
+                        }
+                        label{
+                            vertical-align: top;
+                            cursor: pointer;
+                            color:#464444;
+                            
+                        }
+                        label::before{
+                            content:'';
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right:8px;
+                            margin-left:3px;
+                            color:#fff;
+                            background-color:rgba(0,0,0,0);
+                            width:12px;
+                            height:12px;
+                            border: 1px solid rgb(202, 202, 202);
+                            border-radius:2px;
+                        } 
+                    }
+                }
+
+                &:nth-of-type(4){
+                   height:50px;
+                    button{
+                        width:100%;
+                        height:100%;
+                        border:none;
+                        color:#fff;
+                        cursor: pointer;
+                        background-color: #387ee8;
+                    }
+                }
+            }
+        }
+    }
+    
+}

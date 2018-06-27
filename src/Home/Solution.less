@@ -1,0 +1,130 @@
+.solution_wrap{
+    // width:1920px;
+    max-width: 1920px;
+    height:740px;
+    margin:0 auto;
+    background-image: url('../img/05.jpg');
+    // background-image: url('../img/06.jpg');
+    // background-image: url('../img/07.jpg');
+    // background-image: url('../img/08.jpg');
+    // transition: .5s ease-in-out;
+    background-color: #040227;
+
+    .solution_wrap_content{
+        width:1200px;
+        margin:0 auto;
+        .solution_content_left{
+            float:left;
+            width:280px;
+            height:740px;
+            background-image: url('../img/solution_02.png');
+            .solution_left_nav{
+                margin-top:170px;
+                .solution_nav_item{
+                    height:100px;
+                    font-size:18px;
+                    color:#fff;
+                    line-height:100px;
+                    cursor: pointer;
+                    img{
+                        width:30px;
+                        vertical-align: middle;
+                        margin-left:80px;
+                        margin-right:10px;
+                    }
+                    span{
+                        vertical-align: middle;
+                    }
+
+                    &.solution_nav_active{
+                        border-left:2px solid #387ee8;
+                        background-image: url('../img/solution_01.png')
+                    }
+                }
+            }
+        }
+        .solution_content_right{
+            float:right;
+            width:920px;
+            .solution_right_title{
+                width:500px;
+                height:200px;
+                text-align: center;
+                margin-left:80px;
+                box-sizing:border-box;
+                padding-top:50px;
+                h2{
+                    font-size:25px;
+                    font-weight:normal;
+                    color:#fff;
+                }
+                p{
+                    color:#d9d9d9;
+                }
+            }
+
+            .solution_right_panel{
+                position: relative;
+                margin-left:80px;
+                .solution_panel_item{
+                    position: absolute;
+                    // display: none;
+                    opacity:0;
+                    z-index:1;
+                    &.solution_panel_active{
+                        transition:opacity 1s ease-in-out;
+                        // display: block;
+                        opacity:1;
+                        z-index:5;
+                    }
+                    .solution_item_text{
+                        height:100px;
+                        h3{
+                            font-size:20px;
+                            color:#fff;
+                            margin-bottom:10px;
+                        }
+                        p{
+                            color:#d9d9d9;
+                        }
+                    }
+                    .solution_item_button{
+                        width:120px;
+                        height:35px;
+                        margin:10px 0;
+                        border:1px solid #fff;
+                        border-radius: 3px;
+                        text-align: center;
+                        line-height:35px;
+                        transition:background-color .5s ease-in-out;
+                        &:hover{
+                            background-color: #fff;
+                        }
+                        &:hover>a{
+                            color:black;
+                        }
+                        a{
+                            color:#fff;
+                            display: block;
+                            transition:color .5s ease-in-out;
+                        }
+                    }
+
+                    .solution_item_client{
+                        margin:50px 0;
+                        border-top:1px solid #65666b;
+                        h3{
+                            color:#fff;
+                            font-weight:normal;
+                            margin:30px 0;
+                        }
+                        img{
+                            width:200px;
+                            margin-left:-40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
