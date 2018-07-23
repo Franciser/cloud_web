@@ -1,6 +1,6 @@
 [
     {
-        "src": "./img/01.png",
+        "src": "./img/01.jpg",
         "href": "javascript:;",
         "text": [
             "乐享云可视化大赛",
@@ -9,7 +9,7 @@
         ]
     },
     {
-        "src": "./img/02.png",
+        "src": "./img/02.jpg",
         "href": "javascript:;",
         "text": [
             "容器服务新版正式上线",
@@ -18,7 +18,7 @@
         ]
     },
     {
-        "src": "./img/03.png",
+        "src": "./img/03.jpg",
         "href": "javascript:;",
         "text": [
             "布局教育完整生态链",
@@ -27,7 +27,7 @@
         ]
     },
     {
-        "src": "./img/04.png",
+        "src": "./img/04.jpg",
         "href": "javascript:;",
         "text": [
             "云计算活动专区",
