@@ -1,2 +1,3 @@
-访问一下链接:
-https://franciser.github.io/cloud_web/build/#/
+通过以下链接访问:
+coding:http://FrancisChaner.coding.me/cloud_web/build/
+github:https://franciser.github.io/cloud_web/build/
