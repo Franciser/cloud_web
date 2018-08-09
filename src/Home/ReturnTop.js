@@ -10,7 +10,7 @@ class ReturnTop extends React.Component{
     }
     returnTopFn=()=>{
         clearInterval(timer)
-        var scrollTop = document.documentElement.scrollTop;
+        var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
         var scrollValue = scrollTop;
         timer = setInterval(function () {
             scrollValue -= Math.ceil(scrollValue / 10);
@@ -19,11 +19,12 @@ class ReturnTop extends React.Component{
                 clearInterval(timer)
             }
             document.documentElement.scrollTop = scrollValue;
+            document.body.scrollTop = scrollValue;
         }, 10)
     }
     componentDidMount(){
         window.addEventListener('scroll', function () {
-            var scrollTop = document.documentElement.scrollTop;
+            var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
             if (scrollTop >= 100) {
                 this.setState({
                     isShow:true,

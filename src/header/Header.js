@@ -25,7 +25,7 @@ class Header extends React.Component {
     componentDidMount(){
         //给window绑定滚动时头部背景变色
         window.addEventListener('scroll',function(){
-            var scrollTop=document.documentElement.scrollTop;
+            var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
             if(scrollTop>0){
                 this.setState({
                     isScroll:true
